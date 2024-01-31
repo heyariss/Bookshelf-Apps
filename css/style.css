@@ -6,23 +6,45 @@
 
 body {
     font-family: Sora, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #F6F8FD;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
+/* HEADER START */
 header {
     justify-content: space-between;
     align-content: space-between;
     background: #0d1b35;
     align-items: center;
-    color: white;
     padding: 14px 32px;
+    color: white;
     display: flex;
 }
 
-button {
+header .navright{
+    display: flex;
+    margin: 0;
+    gap: 16px;
+}
+
+header input {
     font-family: Sora, sans-serif;
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-size: 14px;
+    float: right;
+    border: none;
+}
+
+/* HEADER END */
+
+/* BUTTON START */
+button.addBook {
+    font-family: Sora, sans-serif;
+    align-items: center;
     background: white;
     border-radius: 4px;
     padding: 12px 16px;
@@ -30,11 +52,135 @@ button {
     cursor: pointer;
     font-size: 14px;
     color: black;
+    display: flex;
     border: 0;
 }
 
+button p {
+    margin: 0;
+}
+
 button:hover {
-    background-color: #0d1b35;
+    background-color: #eef7ff;
+    transform: scale(1.02);
+    color: #0d1b35;
+}
+
+button img{
+    margin-right: 4px;
+    display: flex;
+    width: 18px;
+}
+
+.addBookImage {
+    border-color: white;
+}
+
+.submitButton {
+    font-family: Sora, sans-serif;
+    background: #0d1b35;
+    align-items: center;
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-weight: bold;
+    margin-top: 24px;
+    cursor: pointer;
+    font-size: 14px;
     color: white;
-    border: 2px solid white;  
+    border: 0;
+}
+
+/* BUTTON END */
+
+/* FORM START */
+#form {
+    border: 1px solid rgb(241, 245, 255);
+    background-color: white;
+    border-radius: 10px;
+    margin-inline: auto;
+    max-width: 720px;
+    display: none; 
+    padding: 20px;
+    margin: 32px;
+    width: 95%;   
+}
+    
+#bukuForm {
+    flex-direction: column;
+    display: flex;
+    padding: 18px;
+    gap: 4px;
+}
+
+label {
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+input {
+    font-family: Sora, sans-serif;
+    background-color: #E5E9F2;
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-size: 14px;
+    float: right;
+    border: none;
+}
+
+input:focus {
+    border: 1px solid #0d1b35;
+    border-radius: 4px;
+}
+
+
+/* FORM END */
+
+#daftar {
+    border: 1px solid rgb(241, 245, 255);
+    background-color: white;
+    justify-content: center;
+    border-radius: 10px;
+    max-width: 720px;
+    padding: 20px;
+    margin: 32px;
+    width: 95%;
+}
+
+h2 {
+    text-align: center;
+}
+  
+
+#tabel {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tabel th {
+    background-color: #0d1b35;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    
+}
+
+#tabel td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.pesan {
+    justify-self: center;
+    text-align: center;
+    font-style: italic;
+    color: #818FB4;
+    font-size: 18px;
+    margin: 32px;
+}
+
+
+#warningIcon {
+    fill: #818FB4;
 }

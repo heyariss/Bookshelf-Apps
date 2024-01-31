@@ -3,12 +3,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookshelf Apps | Heyariss</title>
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
 </head>
 <body>
     <header>
         <h1>Bookshelf</h1>
-        <button type="button">Tambah Buku</button>
+        <div class="navright">
+            <input type="text" placeholder="Search book title, author..">
+            <button class="addBook" id="tambah">
+                <img class="addBookImage" src="./assets/icons/Plus.svg" alt="addBookImage" srcset="">
+                <p>Tambah Buku</p>
+            </button>
+        </div>
+        
+        
     </header>
+    <div id="form">
+        <h2>Daftarkan Buku Baru Sekarang!</h2>
+        <form id="bukuForm" method="post">
+          <label for="judul">Judul:</label>
+          <input type="text" id="judul" name="judul" required>
+          <label for="penulis">Penulis:</label>
+          <input type="text" id="penulis" name="penulis" required>
+          <label for="tahun">Tahun Terbit:</label>
+          <input type="number" id="tahun" name="tahun" required>
+         
+          <button class="submitButton" type="submit">Simpan Buku</button>
+        </form>
+    </div>
+
+    <div id="daftar">
+        <h2>Daftar Buku</h2>
+        <table id="tabel">
+          <thead>
+            <tr>
+              <th>Judul</th>
+              <th>Penulis</th>
+              <th>Tahun Terbit</th>
+            </tr>
+          </thead>
+          <tbody id="isi">
+
+          </tbody>
+        </table>
+        <div class="pesan">
+            <img id="warningIcon" src="./assets/icons/warningIcon.svg" alt="" srcset="">
+            <p id="pesan">Belum ada buku yang ditambahkan</p>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
